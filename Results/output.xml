@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.11.1 on win32)" generated="2024-07-10T06:52:36.594430" rpa="false"
+       schemaversion="5">
+    <suite id="s1" name="Ebay Search"
+           source="C:\Users\basav\PycharmProjects\pythonRobot-framework\Tests\ebay_search.robot">
+        <test id="s1-t1" name="verify ebay search" line="14">
+            <kw name="Start TestCase" owner="commonFunctionality" type="SETUP">
+                <kw name="Open Browser" owner="SeleniumLibrary">
+                    <msg time="2024-07-10T06:52:36.843590" level="INFO">Opening browser 'gc' to base url
+                        'https://www.ebay.com/'.
+                    </msg>
+                    <arg>${url}</arg>
+                    <arg>${Browser}</arg>
+                    <doc>Opens a new browser instance to the optional ``url``.</doc>
+                    <status status="PASS" start="2024-07-10T06:52:36.843590" elapsed="7.440204"/>
+                </kw>
+                <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+                    <arg>10 seconds</arg>
+                    <doc>Sets the implicit wait value used by Selenium.</doc>
+                    <status status="PASS" start="2024-07-10T06:52:44.283794" elapsed="0.002120"/>
+                </kw>
+                <kw name="Maximize Browser Window" owner="SeleniumLibrary">
+                    <doc>Maximizes current browser window.</doc>
+                    <status status="PASS" start="2024-07-10T06:52:44.286895" elapsed="0.040677"/>
+                </kw>
+                <status status="PASS" start="2024-07-10T06:52:36.842583" elapsed="7.486068"/>
+            </kw>
+            <kw name="verify search results" owner="ebay_user_defined_keywords">
+                <kw name="Input Text" owner="SeleniumLibrary">
+                    <msg time="2024-07-10T06:52:44.332968" level="INFO">Typing text 'mobiles' into text field
+                        'css:input[id='gh-ac']'.
+                    </msg>
+                    <arg>css:input[id='gh-ac']</arg>
+                    <arg>mobiles</arg>
+                    <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+                    <status status="PASS" start="2024-07-10T06:52:44.331965" elapsed="0.251167"/>
+                </kw>
+                <kw name="Click Element" owner="SeleniumLibrary">
+                    <msg time="2024-07-10T06:52:44.585134" level="INFO">Clicking element 'css:input[id='gh-btn']'.</msg>
+                    <arg>css:input[id='gh-btn']</arg>
+                    <doc>Click the element identified by ``locator``.</doc>
+                    <status status="PASS" start="2024-07-10T06:52:44.584138" elapsed="2.217195"/>
+                </kw>
+                <kw name="Page Should Contain" owner="SeleniumLibrary">
+                    <msg time="2024-07-10T06:52:46.948313" level="INFO">Current page contains text 'results for
+                        mobiles'.
+                    </msg>
+                    <arg>results for mobiles</arg>
+                    <doc>Verifies that current page contains ``text``.</doc>
+                    <status status="PASS" start="2024-07-10T06:52:46.802616" elapsed="0.145697"/>
+                </kw>
+                <status status="PASS" start="2024-07-10T06:52:44.330938" elapsed="2.617375"/>
+            </kw>
+            <kw name="Finish TestCase" owner="commonFunctionality" type="TEARDOWN">
+                <kw name="Close Browser" owner="SeleniumLibrary">
+                    <doc>Closes the current browser.</doc>
+                    <status status="PASS" start="2024-07-10T06:52:46.949704" elapsed="2.157550"/>
+                </kw>
+                <status status="PASS" start="2024-07-10T06:52:46.949704" elapsed="2.158674"/>
+            </kw>
+            <doc>verifying ebay search funtionality</doc>
+            <tag>functional</tag>
+            <status status="PASS" start="2024-07-10T06:52:36.842583" elapsed="12.266820"/>
+        </test>
+        <doc>verify ebay search textfield</doc>
+        <status status="PASS" start="2024-07-10T06:52:36.596942" elapsed="12.514454"/>
+    </suite>
+    <statistics>
+        <total>
+            <stat pass="1" fail="0" skip="0">All Tests</stat>
+        </total>
+        <tag>
+            <stat pass="1" fail="0" skip="0">functional</stat>
+        </tag>
+        <suite>
+            <stat pass="1" fail="0" skip="0" id="s1" name="Ebay Search">Ebay Search</stat>
+        </suite>
+    </statistics>
+    <errors>
+    </errors>
+</robot>
